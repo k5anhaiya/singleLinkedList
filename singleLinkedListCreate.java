@@ -15,6 +15,15 @@ public class singleLinkedListCreate {
             currentNode = currentNode.next;
         } 
     }
+
+    public static void addNodeAtTail(Node head, int number){
+        Node currNode = head;
+        Node p1=new Node(number);
+        while(currNode.next!=null){
+            currNode = currNode.next;
+        }
+        currNode.next=p1; 
+    }
     public static void main(String[] args) {
         Node p1=new Node(10);
         Node p2=new Node(20);
@@ -29,6 +38,10 @@ public class singleLinkedListCreate {
 
         Node head =p1;
         printLinkedList(p1);
+        System.out.println();
+        System.out.println("---------------------");
+        addNodeAtTail(head,6660);
+        printLinkedList(head);
 
     }
 }
